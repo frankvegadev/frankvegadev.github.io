@@ -85,6 +85,43 @@
             font-size: 2rem;
         }
     }
+
+    .slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.4s ease;
+    }
+    
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #161b22;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    .prev { left: 0; }
+    .next { right: 0; }
+    
+    .nav:hover {
+        background: #30363d;
+    }
 </style>
 </head>
 <body>
@@ -111,8 +148,8 @@
             <img src="assets/Brand_LogoWhite.webp" alt="Mega Cat Logo" width="14%">
             <h3>Mega Cat Studios</h3>
             <p>Responsible for gameplay features and the redesign of core systems across multiple projects to improve scalability.</p>
-            <div class="tech">Front end. Desktop (PC) projects.</div>
             <div class="tech">2024-now</div>
+            <div class="tech">Front end. Desktop (PC) projects.</div>
             <div class="links">
                 <a href="https://megacatstudios.com/">Website</a>
             </div>
@@ -122,8 +159,8 @@
             <img src="assets/imgLogo.de0377ff.svg" alt="Pathfinders Logo" width="10%">
             <h3>Pathfinders Studio</h3>
             <p>Responsible for core systems and tools when working on new projects. Mentored and onboarded new members.</p>
-            <div class="tech">Front & Back-end. Mobile & Web projects.</div>
             <div class="tech">2021-2024</div>
+            <div class="tech">Front & Back-end. Mobile & Web projects.</div>
             <div class="tech">Featured Projects: Time Blast: World Renovation</div>
             <div class="links">
                 <a href="https://pathfindersstudio.com/">Website</a>
@@ -170,6 +207,7 @@
             </div>
 
             <div class="card slide">
+                <img src="assets/fyGaIV.png" alt="Butcher preview" width="100%">
                 <h3>Butcher</h3>
                 <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another dev.</p>
                 <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
