@@ -90,6 +90,19 @@
         }
     }
 
+    .media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+    }
+
+    .mediaTitle {
+    display: block;
+    margin: 0 auto 30px auto; /* centers horizontally */
+    max-width: 300px; /* adjust to taste */
+    }
+
     .slider-container {
     position: relative;
     max-width: 900px;
@@ -166,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </header>
 
 <section>
-    <img src="assets/WMLFEh.png" alt="Butcher preview" class="media">
+    <img src="assets/WMLFEh.png" alt="Butcher preview" class="mediaTitle">
     <h2>About</h2>
     <p>
         Gameplay programmer focused on modular systems and scalable architecture. I build tools that streamline workflows and empower designers. 
