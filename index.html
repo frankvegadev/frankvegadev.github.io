@@ -44,6 +44,10 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
+    
+    .projects.slider {
+    display: flex !important;
+    }
 
     .card {
         background-color: #161b22;
@@ -94,10 +98,11 @@
     }
 
     .slider {
-        display: flex;
-        transition: transform 0.4s ease;
+    display: flex !important;
+    transition: transform 0.4s ease;
+    width: 100%;
     }
-    
+
     .slide {
         min-width: 100%;
         box-sizing: border-box;
