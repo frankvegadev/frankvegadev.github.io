@@ -128,9 +128,13 @@
     position: relative;
     max-width: 900px;
     margin: auto;
-    overflow: hidden;
     padding: 0 60px;
     box-sizing: border-box;
+    }
+    
+    .slider-viewport {
+    width: 100%;
+    overflow: hidden;
     }
 
     .slider {
@@ -142,6 +146,7 @@
 
     .slide {
     flex: 0 0 100%;
+    width: 100%;
     min-width: 0;
     box-sizing: border-box;
     }
@@ -360,99 +365,101 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <button class="nav prev" aria-label="Previous project">‹</button>
 
-        <div class="projects slider">
-
-            <div class="card slide">
-                <iframe
-                    class="project-video"
-                    src="https://player.vimeo.com/video/489280616"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-                <h3>Empty Scream</h3>
-                <p>College thesis project: survival horror game demo developed within a multidisciplinary team. Contributed to gameplay and core systems programming alongside another developer.</p>
-                <div class="tech">Tech: Unity, C#, HDRP, 3D.</div>
-                <div class="links">
-                    <a href="https://emptyscream.itch.io/emptyscream">Play the demo!</a>
+        <div class="slider-viewport">
+            <div class="projects slider">
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://player.vimeo.com/video/489280616"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Empty Scream</h3>
+                    <p>College thesis project: survival horror game demo developed within a multidisciplinary team. Contributed to gameplay and core systems programming alongside another developer.</p>
+                    <div class="tech">Tech: Unity, C#, HDRP, 3D.</div>
+                    <div class="links">
+                        <a href="https://emptyscream.itch.io/emptyscream">Play the demo!</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card slide">
-                <iframe
-                    class="project-video"
-                    src="https://player.vimeo.com/video/380067084"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-                <h3>Fée</h3>
-                <p>College project: tower defense-type game. Developed within a multidisciplinary team and I contributed to all of the programming.</p>
-                <div class="tech">Tech: Unity, C#, 3D.</div>
-                <div class="links">
-                    <a href="https://beldam-games.itch.io/fee">Try our game!</a>
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://player.vimeo.com/video/380067084"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Fée</h3>
+                    <p>College project: tower defense-type game. Developed within a multidisciplinary team and I contributed to all of the programming.</p>
+                    <div class="tech">Tech: Unity, C#, 3D.</div>
+                    <div class="links">
+                        <a href="https://beldam-games.itch.io/fee">Try our game!</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card slide">
-                <img src="assets/fyGaIV.png" alt="Butcher preview" class="media">
-                <h3>Butcher</h3>
-                <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another dev.</p>
-                <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
-                <div class="links">
-                    <a href="https://azzure.itch.io/butcher">Try our game!</a>
+    
+                <div class="card slide">
+                    <img src="assets/fyGaIV.png" alt="Butcher preview" class="media">
+                    <h3>Butcher</h3>
+                    <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another dev.</p>
+                    <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
+                    <div class="links">
+                        <a href="https://azzure.itch.io/butcher">Try our game!</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card slide">
-                <iframe
-                    class="project-video"
-                    src="https://www.youtube.com/watch?v=eOG3G3bzjFE"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-                <h3>CARNICERO</h3>
-                <p>Latest Personal Project: A Horror game currently in development with a multidisciplinary team. My primary focus is building flexible, reusable core systems.</p>
-                <div class="tech">Tech: Unreal Engine 5, C++ & Blueprints.</div>
-                <div class="links">
-                    <a href="https://teamspiral.itch.io/carnicero">Try our game!</a>
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://www.youtube.com/watch?v=eOG3G3bzjFE"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>CARNICERO</h3>
+                    <p>Latest Personal Project: A Horror game currently in development with a multidisciplinary team. My primary focus is building flexible, reusable core systems.</p>
+                    <div class="tech">Tech: Unreal Engine 5, C++ & Blueprints.</div>
+                    <div class="links">
+                        <a href="https://teamspiral.itch.io/carnicero">Try our game!</a>
+                    </div>
                 </div>
+    
             </div>
-
-        </div>
-
-        <button class="nav next" aria-label="Next project">›</button>
-
-        <div class="project-thumbnails">
-        
-                    <button class="project-thumbnail active"
-                            data-index="0"
-                            aria-label="Show Empty Scream"
-                            aria-current="true">
-                        <img src="assets/mU9E6n.png"
-                             alt="">
-                        <span>Empty Scream</span>
-                    </button>
-        
-                    <button class="project-thumbnail"
-                            data-index="1"
-                            aria-label="Show Fée">
-                        <img src="assets/glowing-neon-circle-for-your-decoration-neon-light-round-frame-blank-space-for-text-ultraviolet-spectrum-ring-symbol-halo-png.png" alt="">
-                        <span>Fée</span>
-                    </button>
-        
-                    <button class="project-thumbnail"
-                            data-index="2"
-                            aria-label="Show Butcher">
-                        <img src="assets/dOwCPs.png" alt="">
-                        <span>Butcher</span>
-                    </button>
-        
-                    <button class="project-thumbnail"
-                            data-index="3"
-                            aria-label="Show CARNICERO">
-                        <img src="assets/yaBe3e.png" alt="">
-                        <span>CARNICERO</span>
-                    </button>
-        
+    
+            <button class="nav next" aria-label="Next project">›</button>
+    
+            <div class="project-thumbnails">
+            
+                        <button class="project-thumbnail active"
+                                data-index="0"
+                                aria-label="Show Empty Scream"
+                                aria-current="true">
+                            <img src="assets/mU9E6n.png"
+                                 alt="">
+                            <span>Empty Scream</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="1"
+                                aria-label="Show Fée">
+                            <img src="assets/glowing-neon-circle-for-your-decoration-neon-light-round-frame-blank-space-for-text-ultraviolet-spectrum-ring-symbol-halo-png.png" alt="">
+                            <span>Fée</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="2"
+                                aria-label="Show Butcher">
+                            <img src="assets/dOwCPs.png" alt="">
+                            <span>Butcher</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="3"
+                                aria-label="Show CARNICERO">
+                            <img src="assets/yaBe3e.png" alt="">
+                            <span>CARNICERO</span>
+                        </button>
+            
+            </div>
         </div>
         
     </div>
