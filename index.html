@@ -44,10 +44,6 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
-    
-    .projects.slider {
-    display: flex !important;
-    }
 
     .card {
         background-color: #161b22;
@@ -85,10 +81,21 @@
     }
 
     @media (max-width: 600px) {
-        h1 {
-            font-size: 2rem;
-        }
+    /* Heading */
+    h1 {
+        font-size: 2rem;
     }
+
+    /* Slider */
+    .slider-container {
+        padding: 0 35px;
+    }
+
+    .nav {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
 
     .media {
     width: 70%;
@@ -142,6 +149,27 @@
     .nav:hover {
         background: #30363d;
     }
+
+    .media,
+    .project-video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border: 0;
+        border-radius: 6px;
+    }
+    
+    .project-video {
+        height: auto;
+    }
+
+    .slider-counter {
+    text-align: center;
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    }
 </style>
 </head>
 
@@ -154,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll('.slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
+    const counter = document.querySelector('.slider-counter');
 
     console.log("Slides found:", slides.length);
 
@@ -161,12 +190,14 @@ document.addEventListener("DOMContentLoaded", function () {
         index++;
         if (index >= slides.length) index = 0;
         slider.style.transform = "translateX(-" + (index * 100) + "%)";
+        counter.textContent = `${index + 1} / ${slides.length}`;
     });
 
     prevBtn.addEventListener('click', function() {
         index--;
         if (index < 0) index = slides.length - 1;
         slider.style.transform = "translateX(-" + (index * 100) + "%)";
+        counter.textContent = `${index + 1} / ${slides.length}`;
     });
 
 });
@@ -223,12 +254,16 @@ document.addEventListener("DOMContentLoaded", function () {
     <h2>Featured Personal Projects</h2>
 
     <div class="slider-container">
-        <button class="nav prev">‹</button>
+        <div class="slider-counter" aria-live="polite">
+            1 / 3
+        </div>
+        <button class="nav prev" aria-label="Previous project">‹</button>
 
         <div class="projects slider">
 
             <div class="card slide">
-                <iframe width="100%" height="315"
+                <iframe
+                    class="project-video"
                     src="https://player.vimeo.com/video/489280616"
                     frameborder="0"
                     allowfullscreen>
@@ -242,7 +277,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <div class="card slide">
-                <iframe width="100%" height="315"
+                <iframe
+                    class="project-video"
                     src="https://player.vimeo.com/video/380067084"
                     frameborder="0"
                     allowfullscreen>
@@ -257,7 +293,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="card slide">
                 <img src="assets/fyGaIV.png" alt="Butcher preview" class="media">
-                </iframe>
                 <h3>Butcher</h3>
                 <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another dev.</p>
                 <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
@@ -268,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </div>
 
-        <button class="nav next">›</button>
+        <button class="nav next" aria-label="Next project">›</button>
     </div>
 </section>
 
