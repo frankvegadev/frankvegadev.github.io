@@ -247,16 +247,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextBtn = document.querySelector(".next");
     const prevBtn = document.querySelector(".prev");
     const thumbnails = document.querySelectorAll(".project-thumbnail");
-
+    const counter = document.querySelector(".slider-counter");
+    
     if (!slider || !nextBtn || !prevBtn || slides.length === 0) {
         return;
     }
 
     function showSlide(newIndex) {
         index = (newIndex + slides.length) % slides.length;
-
+        
         slider.style.transform =
             `translateX(-${index * 100}%)`;
+
+        if (counter) {
+            counter.textContent = `${index + 1} / ${slides.length}`;
+        }
 
         thumbnails.forEach((thumbnail, i) => {
             const isActive = i === index;
@@ -348,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="slider-container">
         <div class="slider-counter" aria-live="polite">
-            1 / 3
+            1 / 4
         </div>
         <button class="nav prev" aria-label="Previous project">‹</button>
 
@@ -391,6 +396,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
                 <div class="links">
                     <a href="https://azzure.itch.io/butcher">Try our game!</a>
+                </div>
+            </div>
+
+            <div class="card slide">
+                <iframe
+                    class="project-video"
+                    src="https://youtu.be/eOG3G3bzjFE?si=E8CmAl_s85oUzVAm"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                <h3>CARNICERO</h3>
+                <p>Latest Personal Project: A Horror game currently in development with a multidisciplinary team. My primary focus is building flexible, reusable core systems.</p>
+                <div class="tech">Tech: Unreal Engine 5, C++ & Blueprints.</div>
+                <div class="links">
+                    <a href="https://teamspiral.itch.io/carnicero">Try our game!</a>
                 </div>
             </div>
 
