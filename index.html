@@ -95,6 +95,19 @@
         font-size: 1.5rem;
         padding: 8px;
     }
+
+    .project-thumbnails {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .project-thumbnail {
+        padding: 6px;
+    }
+
+    .project-thumbnail span {
+        font-size: 0.8rem;
+    }
 }
 
     .media {
@@ -120,7 +133,7 @@
     }
 
     .slider {
-    display: flex !important;
+    display: flex;
     transition: transform 0.4s ease;
     width: 100%;
     }
@@ -170,37 +183,117 @@
     font-size: 0.9rem;
     margin-top: 15px;
     }
+
+    /* Thumbnail navigation */
+    .project-thumbnails {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+    }
+    
+    .project-thumbnail {
+        background: #161b22;
+        color: #8b949e;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 8px;
+        cursor: pointer;
+        min-width: 0;
+        transition: border-color 0.2s ease,
+                    transform 0.2s ease;
+    }
+    
+    .project-thumbnail img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    
+    .project-thumbnail span {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.85rem;
+        overflow-wrap: anywhere;
+    }
+    
+    .project-thumbnail:hover {
+        border-color: #8b949e;
+        transform: translateY(-2px);
+    }
+    
+    .project-thumbnail.active {
+        border-color: #58a6ff;
+        color: #e6edf3;
+        box-shadow: 0 0 0 1px #58a6ff;
+    }
+    
+    .project-thumbnail:focus-visible {
+        outline: 2px solid #58a6ff;
+        outline-offset: 3px;
+    }
 </style>
 </head>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
 
+document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    const counter = document.querySelector('.slider-counter');
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelectorAll(".slide");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
+    const thumbnails = document.querySelectorAll(".project-thumbnail");
 
-    console.log("Slides found:", slides.length);
+    if (!slider || !nextBtn || !prevBtn || slides.length === 0) {
+        return;
+    }
 
-    nextBtn.addEventListener('click', function() {
-        index++;
-        if (index >= slides.length) index = 0;
-        slider.style.transform = "translateX(-" + (index * 100) + "%)";
-        counter.textContent = `${index + 1} / ${slides.length}`;
+    function showSlide(newIndex) {
+        index = (newIndex + slides.length) % slides.length;
+
+        slider.style.transform =
+            `translateX(-${index * 100}%)`;
+
+        thumbnails.forEach((thumbnail, i) => {
+            const isActive = i === index;
+
+            thumbnail.classList.toggle("active", isActive);
+
+            if (isActive) {
+                thumbnail.setAttribute("aria-current", "true");
+            } else {
+                thumbnail.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    nextBtn.addEventListener("click", function () {
+        showSlide(index + 1);
     });
 
-    prevBtn.addEventListener('click', function() {
-        index--;
-        if (index < 0) index = slides.length - 1;
-        slider.style.transform = "translateX(-" + (index * 100) + "%)";
-        counter.textContent = `${index + 1} / ${slides.length}`;
+    prevBtn.addEventListener("click", function () {
+        showSlide(index - 1);
     });
 
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", function () {
+            const selectedIndex = Number(thumbnail.dataset.index);
+
+            if (Number.isInteger(selectedIndex) &&
+                selectedIndex >= 0 &&
+                selectedIndex < slides.length) {
+                showSlide(selectedIndex);
+            }
+        });
+    });
+
+    showSlide(0);
 });
+
 </script>
     
 <body>
@@ -304,6 +397,41 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <button class="nav next" aria-label="Next project">›</button>
+
+        <div class="project-thumbnails">
+        
+                    <button class="project-thumbnail active"
+                            data-index="0"
+                            aria-label="Show Empty Scream"
+                            aria-current="true">
+                        <img src="assets/mU9E6n.png"
+                             alt="">
+                        <span>Empty Scream</span>
+                    </button>
+        
+                    <button class="project-thumbnail"
+                            data-index="1"
+                            aria-label="Show Fée">
+                        <img src="assets/glowing-neon-circle-for-your-decoration-neon-light-round-frame-blank-space-for-text-ultraviolet-spectrum-ring-symbol-halo-png.png" alt="">
+                        <span>Fée</span>
+                    </button>
+        
+                    <button class="project-thumbnail"
+                            data-index="2"
+                            aria-label="Show Butcher">
+                        <img src="assets/dOwCPs.png" alt="">
+                        <span>Butcher</span>
+                    </button>
+        
+                    <button class="project-thumbnail"
+                            data-index="3"
+                            aria-label="Show CARNICERO">
+                        <img src="assets/yaBe3e.png" alt="">
+                        <span>UE5 Project</span>
+                    </button>
+        
+        </div>
+        
     </div>
 </section>
 
