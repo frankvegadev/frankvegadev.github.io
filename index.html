@@ -124,23 +124,26 @@
     width: 100%;
     }
 
-    .slider-container {
+   .slider-container {
     position: relative;
     max-width: 900px;
     margin: auto;
     overflow: hidden;
-    padding: 0 60px; /* ← creates space for buttons */
+    padding: 0 60px;
+    box-sizing: border-box;
     }
 
     .slider {
     display: flex;
-    transition: transform 0.4s ease;
     width: 100%;
+    gap: 0;
+    transition: transform 0.4s ease;
     }
 
     .slide {
-        min-width: 100%;
-        box-sizing: border-box;
+    flex: 0 0 100%;
+    min-width: 0;
+    box-sizing: border-box;
     }
     
     .nav {
@@ -402,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card slide">
                 <iframe
                     class="project-video"
-                    src="https://youtu.be/eOG3G3bzjFE?si=E8CmAl_s85oUzVAm"
+                    src="https://www.youtube.com/watch?v=eOG3G3bzjFE"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -447,7 +450,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             data-index="3"
                             aria-label="Show CARNICERO">
                         <img src="assets/yaBe3e.png" alt="">
-                        <span>UE5 Project</span>
+                        <span>CARNICERO</span>
                     </button>
         
         </div>
