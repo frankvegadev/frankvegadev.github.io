@@ -108,7 +108,11 @@
     .project-thumbnail span {
         font-size: 0.8rem;
     }
-}
+
+    .professional-projects {
+    grid-template-columns: 1fr;
+    }
+    }
 
     .media {
     width: 70%;
@@ -242,6 +246,49 @@
         outline: 2px solid #58a6ff;
         outline-offset: 3px;
     }
+    
+    .professional-projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    }
+    
+    .professional-project-card {
+        background: #161b22;
+        border-radius: 8px;
+        padding: 18px;
+        min-width: 0;
+    }
+    
+    .professional-project-image {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-bottom: 12px;
+    }
+    
+    .project-studio {
+        color: #8b949e;
+        font-size: 0.9rem;
+    }
+    
+    .professional-project-card .tech {
+        color: #8b949e;
+        font-size: 0.9rem;
+    }
+    
+    .professional-project-card a {
+        color: #58a6ff;
+        text-decoration: none;
+    }
+    
+    .professional-project-card a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
 
@@ -351,6 +398,66 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="links">
                 <a href="https://pathfindersstudio.com/">Website</a>
             </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Released Games</h2>
+
+    <div class="professional-projects">
+
+        <!-- Backyard Baseball -->
+        <div class="professional-project-card">
+            <img
+                src="assets/byb.png"
+                alt="Backyard Baseball"
+                class="professional-project-image"
+            >
+
+            <h3>Backyard Baseball</h3>
+
+            <p class="project-studio">Mega Cat Studios</p>
+
+            <p>
+                Contributed to the development of the game,
+                focusing on gameplay balance systems.
+            </p>
+
+            <p class="tech">
+                Tech: Unity, C#.
+            </p>
+
+            <a href="https://store.steampowered.com/app/3935020/Backyard_Baseball/" target="_blank">
+                View on Steam!
+            </a>
+        </div>
+
+        <!-- Mobile Game -->
+        <div class="professional-project-card">
+            <img
+                src="assets/tb2.png"
+                alt="Mobile game"
+                class="professional-project-image"
+            >
+
+            <h3>Time Blast World Renovation</h3>
+
+            <p class="project-studio">Pathfinders Studio</p>
+
+            <p>
+                Contributed to the development of the game from start to finish,
+                working on core systems with focus on scalability.
+            </p>
+
+            <p class="tech">
+                Tech: Unity, C#.
+            </p>
+
+            <a href="https://www.pathfindersstudio.com/games/product-timeblast" target="_blank">
+                View the game!
+            </a>
         </div>
 
     </div>
