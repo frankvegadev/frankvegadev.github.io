@@ -80,7 +80,7 @@
         border-top: 1px solid #30363d;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
     /* Heading */
     h1 {
         font-size: 2rem;
@@ -112,13 +112,6 @@
     .professional-projects {
     grid-template-columns: 1fr;
     }
-    }
-
-    .media {
-    width: 70%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 6px;
     }
 
     .mediaTitle {
@@ -291,6 +284,245 @@
     }
 </style>
 </head>
+    
+<body>
+
+<header>
+    <h1>Franco Vega</h1>
+    <p class="subtitle">Game Programmer | Unity • Mobile • Desktop</p>
+</header>
+
+<section>
+    <img src="assets/WMLFEh.png" alt="Butcher preview" class="mediaTitle">
+    <h2>About</h2>
+    <p>
+        Gameplay programmer focused on modular systems and scalable architecture. I build tools that streamline workflows and empower designers. 
+        Primarily focused on Unity, with additional experience using Unreal Engine and Godot.
+    </p>
+</section>
+
+<section>
+    <h2>Work Experience</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <img src="assets/Brand_LogoWhite.webp" alt="Mega Cat Logo" width="18%">
+            <h3>Mega Cat Studios</h3>
+            <p>Responsible for gameplay features and the redesign of core systems across multiple projects to improve scalability.</p>
+            <div class="tech">2024-Present</div>
+            <div class="tech">Frontend · Desktop (PC)</div>
+            <div class="links">
+                <a href="https://megacatstudios.com/">Website</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/imgLogo.de0377ff.svg" alt="Pathfinders Logo" width="10%">
+            <h3>Pathfinders Studio</h3>
+            <p>Responsible for core systems and tools when working on new projects. Mentored and onboarded new members.</p>
+            <div class="tech">2021-2024</div>
+            <div class="tech">Front & Back-end. Mobile & Web projects.</div>
+            <div class="links">
+                <a href="https://pathfindersstudio.com/">Website</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Released Games</h2>
+
+    <div class="professional-projects">
+
+        <!-- Backyard Baseball -->
+        <div class="professional-project-card">
+            <img
+                src="assets/byb.png"
+                alt="Backyard Baseball"
+                class="professional-project-image"
+            >
+
+            <h3>Backyard Baseball</h3>
+
+            <p class="project-studio">Mega Cat Studios</p>
+
+            <p>
+                Contributed to the development of the game,
+                focusing on gameplay balance systems.
+            </p>
+
+            <p class="tech">
+                Tech: Unity, C#.
+            </p>
+
+            <a href="https://store.steampowered.com/app/3935020/Backyard_Baseball/"
+            target="_blank"
+            rel="noopener noreferrer">
+            View on Steam!
+            </a>
+        </div>
+
+        <!-- Mobile Game -->
+        <div class="professional-project-card">
+            <img
+                src="assets/tb2.png"
+                alt="Mobile game"
+                class="professional-project-image"
+            >
+
+            <h3>Time Blast World Renovation</h3>
+
+            <p class="project-studio">Pathfinders Studio</p>
+
+            <p>
+                Contributed to the game's development from start to finish,
+                working on core systems with focus on scalability.
+            </p>
+
+            <p class="tech">
+                Tech: Unity, C#.
+            </p>
+
+            <a href="https://www.pathfindersstudio.com/games/product-timeblast" target="_blank">
+                View the game!
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Featured Personal Projects</h2>
+
+    <div class="slider-container">
+        <div class="slider-counter" aria-live="polite">
+            1 / 4
+        </div>
+        <button class="nav prev" aria-label="Previous project">‹</button>
+
+        <div class="slider-viewport">
+            <div class="projects slider">
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://player.vimeo.com/video/489280616"
+                        title="Empty Scream Gameplay Trailer"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Empty Scream</h3>
+                    <p>Survival horror demo developed as a college thesis project within a multidisciplinary team. Contributed to gameplay and core systems programming alongside another developer.</p>
+                    <div class="tech">Tech: Unity, C#, HDRP, 3D.</div>
+                    <div class="links">
+                        <a href="https://emptyscream.itch.io/emptyscream">Play the demo!</a>
+                    </div>
+                </div>
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://player.vimeo.com/video/380067084"
+                        frameborder="0"
+                        title="Fée Gameplay Trailer"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Fée</h3>
+                    <p>Tower defense game developed as a college project within a multidisciplinary team. Responsible for the game's programming implementation.</p>
+                    <div class="tech">Tech: Unity, C#, 3D.</div>
+                    <div class="links">
+                        <a href="https://beldam-games.itch.io/fee">Try our game!</a>
+                    </div>
+                </div>
+    
+                <div class="card slide">
+                    <img src="assets/fyGaIV.png" alt="Butcher preview" class="media">
+                    <h3>Butcher</h3>
+                    <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another developer.</p>
+                    <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
+                    <div class="links">
+                        <a href="https://azzure.itch.io/butcher">Try our game!</a>
+                    </div>
+                </div>
+    
+                <div class="card slide">
+                    <iframe
+                        class="project-video"
+                        src="https://www.youtube.com/embed/eOG3G3bzjFE"
+                        frameborder="0"
+                        title="CARNICERO Trailer"
+                        allowfullscreen>
+                    </iframe>
+                    <h3>CARNICERO</h3>
+                    <p>Latest Personal Project: A Horror game currently in development with a multidisciplinary team. My primary focus is building flexible, reusable core systems.</p>
+                    <div class="tech">Tech: Unreal Engine 5, C++ & Blueprints.</div>
+                    <div class="links">
+                        <a href="https://teamspiral.itch.io/carnicero">Try our demo!</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <button class="nav next" aria-label="Next project">›</button>
+    
+            <div class="project-thumbnails">
+            
+                        <button class="project-thumbnail active"
+                                data-index="0"
+                                aria-label="Show Empty Scream"
+                                aria-current="true">
+                            <img src="assets/mU9E6n.png"
+                                 alt="">
+                            <span>Empty Scream</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="1"
+                                aria-label="Show Fée">
+                            <img src="assets/glowing-neon-circle-for-your-decoration-neon-light-round-frame-blank-space-for-text-ultraviolet-spectrum-ring-symbol-halo-png.png" alt="">
+                            <span>Fée</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="2"
+                                aria-label="Show Butcher">
+                            <img src="assets/dOwCPs.png" alt="">
+                            <span>Butcher</span>
+                        </button>
+            
+                        <button class="project-thumbnail"
+                                data-index="3"
+                                aria-label="Show CARNICERO">
+                            <img src="assets/yaBe3e.png" alt="">
+                            <span>CARNICERO</span>
+                        </button>
+            
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>
+    Email:
+    <a href="mailto:frankvegadev@gmail.com">
+        frankvegadev@gmail.com
+    </a>
+    </p>
+        <div class="links">
+            <a href="https://github.com/frankvegadev">GitHub</a>
+            <a href="https://github.com/frankvega2010">More GitHub projects</a>
+            <a href="https://frankvega.itch.io">Itch</a>
+            <a href="https://ar.linkedin.com/in/franco-vega-04392b16a">LinkedIn</a>
+        </div>
+</section>
+
+<footer>
+    © 2026 Franco Vega — Built with GitHub Pages
+</footer>
 
 <script>
 
@@ -356,235 +588,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
     
-<body>
-
-<header>
-    <h1>Franco Vega</h1>
-    <p class="subtitle">Game Programmer | Unity • Mobile • Desktop</p>
-</header>
-
-<section>
-    <img src="assets/WMLFEh.png" alt="Butcher preview" class="mediaTitle">
-    <h2>About</h2>
-    <p>
-        Gameplay programmer focused on modular systems and scalable architecture. I build tools that streamline workflows and empower designers. 
-        Primarily focused on Unity, with hands-on experience using Unreal Engine and Godot for smaller projects and prototyping.
-    </p>
-</section>
-
-<section>
-    <h2>Work Experience</h2>
-
-    <div class="projects">
-
-        <div class="card">
-            <img src="assets/Brand_LogoWhite.webp" alt="Mega Cat Logo" width="18%">
-            <h3>Mega Cat Studios</h3>
-            <p>Responsible for gameplay features and the redesign of core systems across multiple projects to improve scalability.</p>
-            <div class="tech">2024-now</div>
-            <div class="tech">Front end. Desktop (PC) projects.</div>
-            <div class="links">
-                <a href="https://megacatstudios.com/">Website</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="assets/imgLogo.de0377ff.svg" alt="Pathfinders Logo" width="10%">
-            <h3>Pathfinders Studio</h3>
-            <p>Responsible for core systems and tools when working on new projects. Mentored and onboarded new members.</p>
-            <div class="tech">2021-2024</div>
-            <div class="tech">Front & Back-end. Mobile & Web projects.</div>
-            <div class="links">
-                <a href="https://pathfindersstudio.com/">Website</a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2>Released Games</h2>
-
-    <div class="professional-projects">
-
-        <!-- Backyard Baseball -->
-        <div class="professional-project-card">
-            <img
-                src="assets/byb.png"
-                alt="Backyard Baseball"
-                class="professional-project-image"
-            >
-
-            <h3>Backyard Baseball</h3>
-
-            <p class="project-studio">Mega Cat Studios</p>
-
-            <p>
-                Contributed to the development of the game,
-                focusing on gameplay balance systems.
-            </p>
-
-            <p class="tech">
-                Tech: Unity, C#.
-            </p>
-
-            <a href="https://store.steampowered.com/app/3935020/Backyard_Baseball/" target="_blank">
-                View on Steam!
-            </a>
-        </div>
-
-        <!-- Mobile Game -->
-        <div class="professional-project-card">
-            <img
-                src="assets/tb2.png"
-                alt="Mobile game"
-                class="professional-project-image"
-            >
-
-            <h3>Time Blast World Renovation</h3>
-
-            <p class="project-studio">Pathfinders Studio</p>
-
-            <p>
-                Contributed to the development of the game from start to finish,
-                working on core systems with focus on scalability.
-            </p>
-
-            <p class="tech">
-                Tech: Unity, C#.
-            </p>
-
-            <a href="https://www.pathfindersstudio.com/games/product-timeblast" target="_blank">
-                View the game!
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2>Featured Personal Projects</h2>
-
-    <div class="slider-container">
-        <div class="slider-counter" aria-live="polite">
-            1 / 4
-        </div>
-        <button class="nav prev" aria-label="Previous project">‹</button>
-
-        <div class="slider-viewport">
-            <div class="projects slider">
-    
-                <div class="card slide">
-                    <iframe
-                        class="project-video"
-                        src="https://player.vimeo.com/video/489280616"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                    <h3>Empty Scream</h3>
-                    <p>College thesis project: survival horror game demo developed within a multidisciplinary team. Contributed to gameplay and core systems programming alongside another developer.</p>
-                    <div class="tech">Tech: Unity, C#, HDRP, 3D.</div>
-                    <div class="links">
-                        <a href="https://emptyscream.itch.io/emptyscream">Play the demo!</a>
-                    </div>
-                </div>
-    
-                <div class="card slide">
-                    <iframe
-                        class="project-video"
-                        src="https://player.vimeo.com/video/380067084"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                    <h3>Fée</h3>
-                    <p>College project: tower defense-type game. Developed within a multidisciplinary team and I contributed to all of the programming.</p>
-                    <div class="tech">Tech: Unity, C#, 3D.</div>
-                    <div class="links">
-                        <a href="https://beldam-games.itch.io/fee">Try our game!</a>
-                    </div>
-                </div>
-    
-                <div class="card slide">
-                    <img src="assets/fyGaIV.png" alt="Butcher preview" class="media">
-                    <h3>Butcher</h3>
-                    <p>Game Jam project: Horror game. Developed within a multidisciplinary team and I contributed to gameplay and core systems programming alongside another dev.</p>
-                    <div class="tech">Tech: Unity, C#, PSX style, 10 days jam.</div>
-                    <div class="links">
-                        <a href="https://azzure.itch.io/butcher">Try our game!</a>
-                    </div>
-                </div>
-    
-                <div class="card slide">
-                    <iframe
-                        class="project-video"
-                        src="https://www.youtube.com/embed/eOG3G3bzjFE"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
-                    <h3>CARNICERO</h3>
-                    <p>Latest Personal Project: A Horror game currently in development with a multidisciplinary team. My primary focus is building flexible, reusable core systems.</p>
-                    <div class="tech">Tech: Unreal Engine 5, C++ & Blueprints.</div>
-                    <div class="links">
-                        <a href="https://teamspiral.itch.io/carnicero">Try our demo!</a>
-                    </div>
-                </div>
-    
-            </div>
-    
-            <button class="nav next" aria-label="Next project">›</button>
-    
-            <div class="project-thumbnails">
-            
-                        <button class="project-thumbnail active"
-                                data-index="0"
-                                aria-label="Show Empty Scream"
-                                aria-current="true">
-                            <img src="assets/mU9E6n.png"
-                                 alt="">
-                            <span>Empty Scream</span>
-                        </button>
-            
-                        <button class="project-thumbnail"
-                                data-index="1"
-                                aria-label="Show Fée">
-                            <img src="assets/glowing-neon-circle-for-your-decoration-neon-light-round-frame-blank-space-for-text-ultraviolet-spectrum-ring-symbol-halo-png.png" alt="">
-                            <span>Fée</span>
-                        </button>
-            
-                        <button class="project-thumbnail"
-                                data-index="2"
-                                aria-label="Show Butcher">
-                            <img src="assets/dOwCPs.png" alt="">
-                            <span>Butcher</span>
-                        </button>
-            
-                        <button class="project-thumbnail"
-                                data-index="3"
-                                aria-label="Show CARNICERO">
-                            <img src="assets/yaBe3e.png" alt="">
-                            <span>CARNICERO</span>
-                        </button>
-            
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: frankvegadev@gmail.com</p>
-        <div class="links">
-            <a href="https://github.com/frankvegadev">GitHub</a>
-            <a href="https://github.com/frankvega2010">Old GitHub</a>
-            <a href="https://frankvega.itch.io">Itch</a>
-            <a href="https://ar.linkedin.com/in/franco-vega-04392b16a">LinkedIn</a>
-        </div>
-</section>
-
-<footer>
-    © 2026 Franco Vega — Built with GitHub Pages
-</footer>
-
 </body>
 </html>
