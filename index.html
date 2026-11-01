@@ -97,7 +97,7 @@
     }
 
     .project-thumbnails {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 8px;
     }
 
@@ -106,15 +106,7 @@
     }
 
     .project-thumbnail span {
-        display: block;
-        width: 100%;
-        font-size: 0.7rem;
-        line-height: 1.25;
-        text-align: center;
-        white-space: normal;
-        word-break: normal;
-        overflow-wrap: anywhere;
-        hyphens: none;
+        font-size: 0.75rem;
     }
 
     .professional-projects {
@@ -227,13 +219,15 @@
     
     .project-thumbnail span {
         display: block;
+        width: 100%;
         margin-top: 8px;
         font-size: 0.85rem;
         line-height: 1.25;
         text-align: center;
-        overflow-wrap: normal;
+        white-space: normal;
+        overflow-wrap: break-word;
         word-break: normal;
-        hyphens: none;
+        box-sizing: border-box;
     }
     
     .project-thumbnail:hover {
